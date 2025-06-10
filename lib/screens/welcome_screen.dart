@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'login_screen.dart'; // Assure-toi que ce chemin est correct
 
 class WelcomeScreen extends StatelessWidget {
-  // Constructeur avec paramètre key optionnel
   const WelcomeScreen({Key? key}) : super(key: key);
 
   @override
@@ -23,7 +23,10 @@ class WelcomeScreen extends StatelessWidget {
             const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
-                // Action du bouton
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const LoginScreen()),
+                );
               },
               child: const Text('Commencer'),
             ),
